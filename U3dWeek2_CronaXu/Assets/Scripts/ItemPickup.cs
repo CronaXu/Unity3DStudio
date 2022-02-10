@@ -8,8 +8,8 @@ public class ItemPickup : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameManager.Instance.AddPoints(5f);
-            //Destroy(gameObject);
+            GameManager.Instance.AddPoints(1f);
+            Destroy(gameObject);
         }
     }
 }
