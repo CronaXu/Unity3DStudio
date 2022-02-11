@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,11 @@ public class GameManager : MonoBehaviour
     public float NumberOfPoints = 0;
 
     public GameObject door;
-    private int timer = 120;
+    private int timer = 100;
+
+    public AudioSource playerAudio;
+    public AudioClip doorOpenSound;
+
 
     public static GameManager Instance
     {
@@ -33,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         // Set the static instance to this instance
         staticInstance = this;
+        
     }
 
     public void AddPoints(float PointsToAdd)
@@ -42,12 +48,15 @@ public class GameManager : MonoBehaviour
         NumberOfPoints += PointsToAdd;
         Debug.Log("Current Score: " + NumberOfPoints);
 
-        if (NumberOfPoints >= 49)
+        if (NumberOfPoints == 49)
         {
             door.AddComponent<Rigidbody>();
             door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX;
             door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+
+            playerAudio.clip = doorOpenSound;
+            playerAudio.Play();
 
         }
     }
@@ -60,6 +69,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        
         if (NumberOfPoints >= 49)
         {
             
