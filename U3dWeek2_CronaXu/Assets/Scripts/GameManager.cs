@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public float NumberOfPoints = 0;
 
     public GameObject door;
-    private int timer = 50;
+    private int timer = 120;
 
     public static GameManager Instance
     {
