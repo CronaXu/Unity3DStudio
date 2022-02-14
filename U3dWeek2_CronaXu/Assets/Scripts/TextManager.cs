@@ -21,7 +21,7 @@ public class TextManager : MonoBehaviour
     void Update()
     {
         NumberOfPoints = gameManager.GetComponent<GameManager>().NumberOfPoints;
-        appleCount.text = NumberOfPoints + "/49";
+        appleCount.text = NumberOfPoints + "/50";
 
     }
 }
