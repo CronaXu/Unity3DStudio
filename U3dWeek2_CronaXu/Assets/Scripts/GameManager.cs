@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public float NumberOfPoints = 0;
 
     public GameObject door;
-    private int timer = 100;
+    //private int timer = 100;
 
     public AudioSource playerAudio;
     public AudioClip doorOpenSound;
@@ -70,16 +70,16 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-        if (NumberOfPoints >= 49)
-        {
+        //if (NumberOfPoints >= 49)
+        //{
             
-            timer--;
+        //    timer--;
             
-        }
+        //}
 
-        if (timer < 1)
-        {
-            door.GetComponent<MeshCollider>().convex = true;
-        }
+        //if (timer < 1)
+        //{
+        //    door.GetComponent<MeshCollider>().convex = true;
+        //}
     }
 }
