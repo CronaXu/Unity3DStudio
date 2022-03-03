@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_URPWater_Demo_WorldSpace
   m_Shader: {fileID: 4800000, guid: 206e4b0fd7976c742b851eef70622872, type: 3}
-  m_ShaderKeywords: _CAUSTICSMODE_3D _COLORMODE_COLORS _DISPLACEMENTMODE_OFF _EDGEFADE_ON
-    _FOAM_RIPPLE_ON _NORMALSMODE_SINGLE _REFLECTIONMODE_REALTIME _WORLD_UV
+  m_ShaderKeywords: _CAUSTICSMODE_3D _CAUSTICS_ON _COLORMODE_COLORS _DISPLACEMENTMODE_OFF
+    _EDGEFADE_ON _FOAM_RIPPLE_ON _NORMALSMODE_SINGLE _REFLECTIONMODE_REALTIME _WORLD_UV
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -124,7 +124,7 @@ Material:
     - _CapsScatteringIntensity: 1
     - _CapsScatteringRangeMax: 1
     - _CapsScatteringRangeMin: 0
-    - _Caustics: 0
+    - _Caustics: 1
     - _CausticsAngleMask: 0
     - _CausticsDirectionMask: 0
     - _CausticsDistortion: 0.351

@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_URPWater_Demo_CubeMap
   m_Shader: {fileID: 4800000, guid: 206e4b0fd7976c742b851eef70622872, type: 3}
-  m_ShaderKeywords: _CAUSTICSMODE_2D _COLORMODE_COLORS _DISPLACEMENTMODE_OFF _FOAM_RIPPLE_ON
-    _NORMALSMODE_SINGLE _REFLECTIONMODE_CUBEMAP
+  m_ShaderKeywords: _CAUSTICSMODE_3D _CAUSTICS_ON _COLORMODE_COLORS _DISPLACEMENTMODE_OFF
+    _FOAM_RIPPLE_ON _NORMALSMODE_SINGLE _REFLECTIONMODE_CUBEMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -37,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CubemapTexture:
-        m_Texture: {fileID: 8900000, guid: 0bc73f89ce8d9554f9272647687419f3, type: 3}
+        m_Texture: {fileID: 8900000, guid: a17710693082d41d6bd588c5094e828b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -124,13 +124,13 @@ Material:
     - _CapsScatteringIntensity: 1
     - _CapsScatteringRangeMax: 1
     - _CapsScatteringRangeMin: 0
-    - _Caustics: 0
+    - _Caustics: 1
     - _CausticsAngleMask: 0
     - _CausticsDirectionMask: 0
     - _CausticsDistortion: 0.351
     - _CausticsEnd: 4
     - _CausticsIntensity: 8
-    - _CausticsMode: 0
+    - _CausticsMode: 1
     - _CausticsStart: 0
     - _CausticsTiling3D: 0.5
     - _ClearCoatMask: 0
@@ -189,11 +189,11 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionDistortion: 0.047
-    - _ReflectionFresnel: 2.01
+    - _ReflectionFresnel: 4
     - _ReflectionFresnelNormal: 0.152
-    - _ReflectionIntensity: 1
+    - _ReflectionIntensity: 0.8
     - _ReflectionMode: 1
-    - _ReflectionRoughness: 0.071
+    - _ReflectionRoughness: 0.5
     - _Scattering: 0
     - _ScatteringIntensity: 1
     - _ScatteringRangeMax: 2
@@ -218,8 +218,8 @@ Material:
     - _CausticsSpeed: {r: 1, g: 1, b: -0.2, a: -0.33}
     - _CausticsSpeed3D: {r: 1, g: 1, b: 1, a: 1}
     - _CausticsTiling: {r: 0.2, g: 0.2, b: 0.1, a: 0.1}
-    - _Color: {r: 0.25490195, g: 0.98039216, b: 0.6740629, a: 1}
-    - _DepthColor: {r: 0, g: 0.25999996, b: 0.39999998, a: 1}
+    - _Color: {r: 0.25490195, g: 0.98039216, b: 0.93908024, a: 1}
+    - _DepthColor: {r: 0.088777125, g: 0.37810606, b: 0.5377358, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlowTiling: {r: 1, g: 1, b: 0, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
