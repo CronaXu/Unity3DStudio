@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +20,9 @@ public class GameManager : MonoBehaviour
 
     public AudioSource playerAudio;
     public AudioClip doorOpenSound;
+
+
+    public bool currentPickupValue;
 
 
     public static GameManager Instance
@@ -65,6 +70,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log(Apples.IndexOf(appleObject));
         CurrentIndex = Apples.IndexOf(appleObject);
+    }
+
+    public void OnPickup(InputAction.CallbackContext context)
+    {
+        currentPickupValue = context.ReadValue<float>() == 1;
     }
 
     void Update()
