@@ -37,6 +37,8 @@ Bin.meta
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
 
+**/AnimeNightEquirect.png
+
 # Ignore Jetbrains Plugin
 Assets/Plugins/Editor/JetBrains.meta
 Assets/Plugins/Editor/JetBrains/*
