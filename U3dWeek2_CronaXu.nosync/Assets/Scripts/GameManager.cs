@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float NumberOfPoints = 0;
 
     public GameObject door;
+    public GameObject terrain;
     //private int timer = 100;
 
     public AudioSource playerAudio;
@@ -59,6 +60,8 @@ public class GameManager : MonoBehaviour
             door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
             door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX;
             door.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
+
+            terrain.GetComponent<TerrainCollider>().enabled = false;
 
             playerAudio.clip = doorOpenSound;
             playerAudio.Play();
